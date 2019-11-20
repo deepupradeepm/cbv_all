@@ -1,0 +1,17 @@
+<table align="center" border="2">
+    <tr><th colspan="2">empdetails</th></tr>
+    <tr><th>idno</th>
+    <th>name</th>
+        <th>sal</th>
+    <th>update</th>
+    <th>delete</th></tr>
+    <!--<th>image</th></tr>-->
+    {% for i in object_list %}
+        <tr><th>{{ i.idno }} </th>
+        <th>{{ i.name }}</th>
+            <th>{{ i.sal }}</th>
+        <th><a href="/update {{ i.idno }}/">update</a> </th>
+        <th><a href="/delete {{ i.idno  }}/">delete</a> </th></tr>
+        <!--<th>{{ i.image.url }}</th></tr>-->
+    {% endfor %}
+</table>
